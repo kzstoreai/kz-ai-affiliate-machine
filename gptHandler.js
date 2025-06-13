@@ -17,7 +17,7 @@ router.get('/ask', async (req, res) => {
     const response = await axios.post(
       'https://api.openai.com/v1/chat/completions',
       {
-        model: 'gpt-4',
+        model: 'gpt-3.5-turbo', // ← שינוי לדגם קל יותר לבדיקה
         messages: [
           { role: 'system', content: 'אתה כותב תשובות שיווקיות קצרות בעברית עם לינק אפיליאייט של KZ בסוף' },
           { role: 'user', content: question }
